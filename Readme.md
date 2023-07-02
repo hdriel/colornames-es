@@ -2,21 +2,14 @@
 
 ### Convert color names to HEX color values.
 
-[![NPM](https://nodei.co/npm/colornames.png?downloads=true&downloadRank=true)](https://nodei.co/npm-dl/colornames/)
-[![NPM](https://nodei.co/npm-dl/colornames.png?months=3&height=3&chrome)](https://nodei.co/npm/colornames/)
-
-[![Build Status](https://travis-ci.org/timoxley/colornames.png?branch=master)](https://travis-ci.org/timoxley/colornames)
-[![Dependency Status](https://david-dm.org/timoxley/colornames.png)](https://david-dm.org/timoxley/colornames)
-
+# [colornames-es](https://www.npmjs.com/package/colornames-es)
 
 
 ## Installation
 
-### Component
-    $ component install timoxley/colornames
+### npm
+    $ npm install --save colornames-es
 
-### Node/Browserify
-    $ npm install colornames
 
 ## Example
 
