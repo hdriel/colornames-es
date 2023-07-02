@@ -21,7 +21,7 @@
 ## Example
 
 ```js
-var toHex = require('colornames')
+import toHex from 'colornames';
 ```
 
 ### VGA color names

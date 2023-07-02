@@ -1,34 +1,53 @@
 {
-  "name": "colornames",
-  "version": "1.1.1",
-  "description": "Map color names to HEX color values.",
-  "main": "index.js",
-  "directories": {
-    "example": "example"
-  },
-  "scripts": {
-    "test": "node test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/timoxley/colornames.git"
-  },
-  "author": "Tim Oxley",
-  "license": "MIT",
-  "keywords": [
-    "color",
-    "colour",
-    "names",
-    "css",
-    "hex",
-    "rgb",
-    "convert"
-  ],
-  "bugs": {
-    "url": "https://github.com/timoxley/colornames/issues"
-  },
-  "devDependencies": {
-    "tape": "^4.4.0"
-  },
-  "homepage": "https://github.com/timoxley/colornames#readme"
+    "name": "colornames-es",
+    "version": "1.1.1",
+    "description": "Map color names to HEX color values.",
+    "main": "dist/index.ts",
+    "module": "dist/index-es.ts",
+    "type": "module",
+    "directories": {
+        "example": "example"
+    },
+    "scripts": {
+        "test": "node test.js",
+        "build:ts": "tsc -p tsconfig.json -w",
+        "build:debug": "cross-env NODE_ENV=production rollup -c rollup.config.js",
+        "build": "cross-env NODE_ENV=production rollup -c rollup.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://https://github.com/hdriel/colornames-es.git"
+    },
+    "files": [
+        "dist/*"
+    ],
+    "author": "Tim Oxley",
+    "license": "MIT",
+    "keywords": [
+        "color",
+        "colour",
+        "names",
+        "css",
+        "hex",
+        "rgb",
+        "convert"
+    ],
+    "bugs": {
+        "url": "https://github.com/timoxley/colornames/issues"
+    },
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^11.1.2",
+        "component-classes": "^1.2.6",
+        "component-domify": "^1.2.2",
+        "cross-env": "^7.0.3",
+        "prettier": "^2.8.8",
+        "rollup": "^3.26.0",
+        "rollup-plugin-delete": "^2.0.0",
+        "rollup-plugin-dts": "^5.3.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "tape": "^4.4.0",
+        "tslib": "^2.6.0",
+        "typescript": "^5.1.6"
+    },
+    "homepage": "https://github.com/timoxley/colornames#readme"
 }

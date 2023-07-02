@@ -1,6 +1,6 @@
-var test = require('tape')
+import test from 'tape';
 
-var toHex = require('./index.js')
+import toHex from './src';
 
 test('maps VGA color names to HEX values', function(t) {
   t.plan(3)
