@@ -2,7 +2,7 @@ import del from 'rollup-plugin-delete';
 import dts from 'rollup-plugin-dts';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-// import generatePackageJson from 'rollup-plugin-generate-package-json';
+import generatePackageJson from 'rollup-plugin-generate-package-json';
 import filesize from 'rollup-plugin-filesize';
 import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
@@ -18,9 +18,10 @@ export default [
         input: 'src/index.ts', // Update with the path to your entry file
         output: [
             {
+                name: 'colornames',
                 sourcemap: 'inline',
-                file: packageJson.main,
-                format: 'cjs',
+                file: packageJson.browser,
+                format: 'umd',
                 exports: 'named',
                 interop: 'auto',
             },

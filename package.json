@@ -1,18 +1,16 @@
 {
     "name": "colornames-es",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Map color names to HEX color values with es-module and typescript",
-    "main": "dist/index.js",
-    "module": "dist/index-esm.js",
+    "main": "dist/index-esm.min.js",
+    "module": "dist/index-esm.min.js",
+    "browser": "dist/index.umd.min.js",
     "types": "dist/index.d.ts",
     "type": "module",
-    "directories": {
-        "example": "example"
-    },
     "scripts": {
         "test": "jest",
-        "build:ts": "tsc -p tsconfig.json -w",
-        "build:debug": "cross-env NODE_ENV=production rollup -c rollup.config.js",
+        "build:ts": "tsc -p tsconfig.json",
+        "build:debug": "cross-env NODE_ENV=development rollup -c rollup.config.js",
         "build": "cross-env NODE_ENV=production rollup -c rollup.config.js"
     },
     "repository": {
@@ -20,7 +18,7 @@
         "url": "git://https://github.com/hdriel/colornames-es.git"
     },
     "files": [
-        "dist/*"
+        "dist"
     ],
     "author": "Hadriel Benjo",
     "license": "MIT",

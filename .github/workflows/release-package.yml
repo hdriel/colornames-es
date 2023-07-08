@@ -31,7 +31,8 @@ jobs:
 
             - name: publish step
               run: | # build lib output and publish
+                npm run build:debug
                 npm publish
-                npm run build
+
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
