@@ -24,9 +24,14 @@ jobs:
             - name: building package
               run: | # Install npm packages and build lib output before publish
                 npm ci
-                npm run build
+
+            - name: tests
+              run: | # run tests
+                npm test
 
             - name: publish step
-              run: npm publish
+              run: | # build lib output and publish
+                npm publish
+                npm run build
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
