@@ -1,9 +1,9 @@
 {
     "name": "colornames-es",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Map color names to HEX color values with es-module and typescript",
     "main": "dist/index.js",
-    "module": "dist/index-es.js",
+    "module": "dist/index-esm.js",
     "types": "dist/index.d.ts",
     "type": "module",
     "directories": {

@@ -21,6 +21,7 @@ export default [
                 sourcemap: 'inline',
                 file: packageJson.main,
                 format: 'cjs',
+                exports: 'named',
                 interop: 'auto',
             },
             // ES2015 modules version so consumers can tree-shake
@@ -28,17 +29,18 @@ export default [
                 sourcemap: 'inline',
                 file: packageJson.module,
                 format: 'es',
+                exports: 'named',
                 interop: 'esModule',
             },
         ],
         plugins: [
             del({ targets: 'dist/*' }),
             resolve(),
-            commonjs(),
             typescript({
                 tsconfig: 'tsconfig.json',
                 exclude: ['**/__tests__', '**/*.test.ts'],
             }),
+            commonjs(),
             ...(isProd ? [terser()] : []),
             filesize(),
         ],
